@@ -3,6 +3,7 @@
 # The important compatibility point is the *protocol* version, which hasn't changed in ages.
 VERSION=10.6-1
 
+
 cd `dirname $0`
 
 PACKDIR=$(mktemp -d -t wat.XXXXXX)
@@ -72,3 +73,11 @@ mv bin/*.dll $WINDOWS_BIN/bin/
 popd
 
 rm -rf $PACKDIR
+
+find pgsql -type l | xargs rm
+
+
+for f in $(find pgsql | grep -E '[\.0-9]*\.[0-9]+$'); do
+    re=$(echo $f | sed 's/[\.0-9]*\.[0-9]*$//g')
+    mv "$f" "$re"
+done
