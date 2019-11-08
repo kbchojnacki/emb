@@ -1,8 +1,7 @@
 'use strict';
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
-const path = require('path');
-const dir = path.dirname(require.main.filename);
+const dir = __dirname;
 
 const isWin = process.platform === "win32";
 const isLin = process.platform === "linux";
