@@ -1,0 +1,22 @@
+{
+  "name": "@kbchojnacki/embedded-postgres",
+  "version": "1.0.0",
+  "description": "Embedded postgres",
+  "main": "embedded-postgres.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbchojnacki/emb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbchojnacki/emb/issues"
+  },
+  "engines": {
+    "node": ">=8.16.2"
+  },
+  "homepage": "https://github.com/kbchojnacki/emb#readme"
+}

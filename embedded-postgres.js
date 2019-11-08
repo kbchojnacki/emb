@@ -1,3 +1,4 @@
+'use strict';
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 const path = require('path');
@@ -28,8 +29,15 @@ const stop = async () => {
     await clean();
 }
 
-module.exports = {
-    start:start,
-    stop:stop
-}
+/**
+ * Start postgresSQL server
+ * @return {Promise}
+ */
+exports.start = start;
+
+/**
+ * Stop postgresSQL server
+ * @return {Promise}
+ */
+exports.stop = stop;
 
