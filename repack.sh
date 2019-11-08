@@ -9,7 +9,7 @@ PACKDIR=$(mktemp -d -t wat.XXXXXX)
 LINUX_DIST=dist/postgresql-$VERSION-linux-x64-binaries.tar.gz
 OSX_DIST=dist/postgresql-$VERSION-osx-binaries.zip
 WINDOWS_DIST=dist/postgresql-$VERSION-win-binaries.zip
-
+mkdir dist
 LINUX_BIN=$PWD/pgsql/lin
 OSX_BIN=$PWD/pgsql/osx
 WINDOWS_BIN=$PWD/pgsql/win
